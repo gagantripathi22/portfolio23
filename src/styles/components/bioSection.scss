@@ -1,0 +1,324 @@
+.bioArea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 6vw);
+}
+
+.bioHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 3.2vw 3.2vw;
+}
+
+.menuIconGroup {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  cursor: pointer;
+  height: calc(0.5vw + 0.8vw);
+  width: calc(0.5vw + 0.8vw);
+  z-index: 71;
+}
+
+@keyframes menuHoverAnimation {
+  50% {
+    transform: scale(1.3);
+  }
+}
+
+// @for $i from 1 through 3 {
+//   .menuIconCircle:nth-child(#{$i}) {
+//     animation-delay: 200ms * $i;
+//     animation-name: menuHoverAnimation;
+//     animation-fill-mode: forwards;
+//   }
+// }
+
+.menuIconCircle {
+  height: 0.5vw;
+  width: 0.5vw;
+  border-radius: 15px;
+  background-color: #313131;
+  position: absolute;
+  animation-duration: 2s;
+  transition: 0.5s;
+}
+
+@for $i from 1 through 3 {
+  .menuIconCircleAnimation:nth-child(#{$i}) {
+    animation-delay: 200ms * $i;
+    animation-name: menuHoverAnimation;
+    // animation-fill-mode: forwards;
+  }
+}
+
+// .menuIconCircleAnimation {
+//   animation: menuHoverAnimation;
+// }
+
+.menuIconCircleTop {
+  margin-bottom: 0.5vw;
+  top: 0;
+  left: 0;
+}
+
+.menuIconCircleLeft {
+  margin-right: 0.5vw;
+  top: calc(0.5vw + 0.5vw);
+}
+
+.menuIconCircleRight {
+  margin-right: 0.5vw;
+  top: calc(0.5vw + 0.5vw);
+  left: calc(0.5vw + 0.5vw);
+}
+
+.menuArea {
+  position: relative;
+}
+
+.menu {
+  background-color: #ffffff75;
+  backdrop-filter: blur(10px);
+  border: 0.05vw solid #aaa;
+  position: absolute;
+  left: -1vw;
+  top: -1vw;
+  z-index: 31;
+  transition: 0.4s;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.menuItem {
+  font-family: "PPNeueMedium";
+  margin-top: 5px;
+  font-size: 1.2vw;
+  min-width: 12vw;
+  cursor: pointer;
+}
+
+.menuClose {
+  height: 0;
+  width: 0;
+  border: none;
+}
+
+.menuItemList {
+  opacity: 0;
+  transition: 0.4s;
+  margin-top: 3vw;
+}
+
+.menuItemListVisible {
+  opacity: 1;
+  margin-top: 4vw;
+}
+
+.menuOpen {
+  height: 7vw;
+  width: 14vw;
+  // padding-top: 3.6vw;
+}
+
+.nameAndDiscord {
+  padding: 0 3.2vw;
+  width: 100%;
+}
+
+.ownName {
+  font-size: 1.8vw;
+  font-family: "PPNeueMedium";
+  color: #313131;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+.designation {
+  font-family: "PPNeueRegular";
+  color: #313131;
+  font-size: 1.3vw;
+  margin-top: 0.5vw;
+}
+
+.skillsArea {
+  width: 100%;
+  // padding: 3.2vw 3.2vw;
+  padding: 3.2vw 3.2vw 0 3.2vw;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  // max-height: 350px;
+  position: relative;
+}
+
+.skillsGradient {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 35%,
+    rgba(0, 212, 255, 0) 100%
+  );
+  width: 100%;
+  height: 7vw;
+  position: absolute;
+  transition: 0.2s;
+}
+
+.skillsGradientTop {
+  top: 4vw;
+  left: 0;
+}
+
+.skillsGradientBottom {
+  bottom: 1px;
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.skillListHeading {
+  font-size: 0.8vw;
+  font-family: "PPNeueMedium";
+  color: #313131;
+}
+
+.skillsList {
+  padding-top: 1vw;
+  padding-bottom: 7vw;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.5vw;
+  row-gap: 0.7vw;
+  overflow: scroll;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.skillsList::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.skillsItem {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  /* padding: 11px 36px; */
+  padding: 0.7vw 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: fit-content;
+  font-family: RobotoMonoMedium;
+  font-size: 0.7vw;
+  /* margin-right: 9px; */
+}
+
+.linksArea {
+  width: 100%;
+  padding: 0 3.2vw 3.2vw 3.2vw;
+  max-height: 100%;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  height: fit-content;
+}
+
+.linkItem {
+  background-color: #fff;
+  border: 0.05vw solid #aaa;
+  border-radius: 5px;
+  padding: 0.7vw 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: fit-content;
+  font-family: RobotoMonoMedium;
+  margin-right: 0.5vw;
+  font-size: 0.7vw;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .bioHeader {
+    margin-top: 90px;
+  }
+  .menuIconCircle {
+    height: 3vw;
+    width: 3vw;
+  }
+  .menuIconCircleTop {
+    margin-bottom: 2vw;
+    top: 0;
+    left: 0;
+  }
+  .menuIconCircleLeft {
+    margin-right: 0.5vw;
+    top: 7vw;
+  }
+  .menuIconCircleRight {
+    margin-right: 0.5vw;
+    top: 7vw;
+    left: 7vw;
+  }
+  .ownName {
+    font-size: 8vw;
+  }
+  .designation {
+    font-size: 6vw;
+    margin-top: 8px;
+  }
+  .menuIconGroup {
+    height: 12vw;
+  }
+  .bioHeader {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+  .skillsArea {
+    display: none;
+  }
+  .linksArea {
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  .linkItem {
+    padding: 2.8vw 8vw;
+    font-size: 3.2vw;
+    border: 1px solid #aaa;
+    margin-right: 8px;
+  }
+  @keyframes menuHoverAnimation {
+    50% {
+      transform: scale(1.2);
+    }
+  }
+  .menuArea {
+    position: inherit;
+  }
+  .menu {
+    margin-top: 140px;
+    left: 1px;
+  }
+  .menuOpen {
+    height: 70vw;
+    width: 60vw;
+  }
+  .menuItemList {
+    margin-top: 22vw;
+  }
+  .menuItem {
+    font-size: 6vw;
+  }
+  .menuOpen {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
