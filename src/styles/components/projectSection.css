@@ -4,6 +4,7 @@
   padding: calc(3.2vw + 3vw) 3.2vw;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .projectItem {
@@ -29,6 +30,7 @@
   overflow: hidden;
   text-align: center;
   cursor: pointer;
+  position: relative;
 }
 
 .projectItemImage {
@@ -73,6 +75,65 @@
   cursor: pointer;
 }
 
+.screenshotItem {
+  width: 100%;
+  /* min-height: 500px; */
+  max-height: 70vh;
+  aspect-ratio: 16/9;
+  background-color: #fff;
+  margin-bottom: 3.2vw;
+  object-fit: contain;
+  border: 0.05vw solid #aaaaaa;
+  display: flex;
+  flex-direction: column;
+}
+
+.screenshotImageArea {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.screenshotSectionBackBtn {
+  position: absolute;
+  right: 1vw;
+  top: 1vw;
+  padding: 0.5vw;
+  background-color: #ffffff7f;
+  border: 0.05vw solid #aaa;
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: fit-content;
+  font-family: RobotoMonoMedium;
+  font-size: 0.7vw;
+  position: sticky;
+  top: 6.2vw;
+  left: 3.3vw;
+  margin-bottom: 2vw;
+  cursor: pointer;
+}
+
+.expandBtn {
+  position: absolute;
+  right: 1vw;
+  top: 1vw;
+  padding: 0.5vw;
+  background-color: #ffffff7f;
+  border: 0.05vw solid #aaa;
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: fit-content;
+  font-family: RobotoMonoMedium;
+  font-size: 0.7vw;
+}
+
 @media (max-width: 768px) {
   .projectArea {
     width: 94vw;
@@ -92,5 +153,11 @@
   .projectItemActionBtn {
     padding: 2.8vw 8vw;
     font-size: 2.8vw;
+  }
+  .screenshotSectionBackBtn {
+    padding: 1.5vw;
+    font-size: 3.2vw;
+    border: 1px solid #aaa;
+    margin-bottom: 8vw;
   }
 }

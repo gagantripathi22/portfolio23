@@ -96,6 +96,41 @@
   display: none; /* Safari and Chrome */
 }
 
+.leftSection {
+  /* margin-top: -50px; */
+  /* opacity: 1; */
+  /* transform: translateY(50px); */
+  /* transition: 0.7s; */
+}
+
+.rightSection {
+}
+
+@keyframes SectionAnimation {
+  50% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  50.99% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.leftSectionAnimation {
+  animation: SectionAnimation 1.3s;
+  animation-fill-mode: forwards;
+}
+
+.rightSectionAnimation {
+  animation: SectionAnimation 1.3s;
+  animation-delay: 200ms;
+  animation-fill-mode: forwards;
+}
+
 @media (max-width: 768px) {
   .innerSections {
     flex-direction: column;

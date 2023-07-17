@@ -3,11 +3,13 @@ import "../../styles/components/bioSection.scss";
 import { LeftSectionContext } from "../../pages/Home";
 
 const BioSection = () => {
-  const { currentSectionTitle, setCurrentSectionTitle } =
-    useContext(LeftSectionContext);
+  const {
+    currentSectionTitle,
+    setCurrentSectionTitle,
+    currentSelectedProjectData,
+  } = useContext(LeftSectionContext);
 
-  const tempSkills =
-    "React, Next 13, Node, Express, Redux, JavaScript, HTML5, Tailwind CSS, CSS, React Native, Flutter, Electron, Dart, Git, Firebase, MongoDB Atlas, REST API, C++, MySQL, MongoDB, SQLite, Sequelize, PhpMyAdmin, Mongoose, Visual Studio Code, Android Studio, Postman";
+  const tempSkills = currentSelectedProjectData.data.tech;
 
   const [skills, setSkills] = useState(tempSkills.split(", "));
 
@@ -113,8 +115,10 @@ const BioSection = () => {
         </div>
       </div>
       <div className="nameAndDiscord">
-        <h1 className="ownName">Gagan Tripathi</h1>
-        <div className="designation">Developer</div>
+        <h1 className="ownName">{currentSelectedProjectData.data.name}</h1>
+        <div className="designation">
+          {currentSelectedProjectData.data.discription}
+        </div>
         <div className="discordStatus"></div>
       </div>
       <div className="skillsArea">
@@ -123,7 +127,7 @@ const BioSection = () => {
           className="skillsGradient skillsGradientTop"
           ref={skillGradientTopRef}
         ></div>
-        <div className="skillListHeading">Tech Used in Projects</div>
+        <div className="skillListHeading">Tech Used</div>
         <div className="skillsList" ref={skillsScrollRef}>
           {skills.map((item) => {
             return <div className="skillsItem">{item}</div>;
@@ -136,13 +140,21 @@ const BioSection = () => {
       </div>
       <div className="linksArea">
         <div className="linkList">
-          {links.map((item) => {
-            return (
-              <a href={item.link} target="_blank">
-                <div className="linkItem">{item.name}</div>
-              </a>
-            );
-          })}
+          {currentSelectedProjectData.data.github && (
+            <a href={currentSelectedProjectData.data.github} target="_blank">
+              <div className="linkItem">Github</div>
+            </a>
+          )}
+          {currentSelectedProjectData.data.website && (
+            <a href={currentSelectedProjectData.data.website} target="_blank">
+              <div className="linkItem">Visit</div>
+            </a>
+          )}
+          {currentSelectedProjectData.data.download && (
+            <a href={currentSelectedProjectData.data.download} target="_blank">
+              <div className="linkItem">Download</div>
+            </a>
+          )}
         </div>
       </div>
     </div>

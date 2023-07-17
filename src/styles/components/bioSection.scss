@@ -1,5 +1,6 @@
 .bioArea {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   max-height: calc(100vh - 6vw);
@@ -176,7 +177,7 @@
 }
 
 .skillsGradientBottom {
-  bottom: 1px;
+  bottom: 0;
   left: 0;
   transform: rotate(180deg);
 }
@@ -251,8 +252,8 @@
     margin-top: 90px;
   }
   .menuIconCircle {
-    height: 3vw;
-    width: 3vw;
+    height: 2.2vw;
+    width: 2.2vw;
   }
   .menuIconCircleTop {
     margin-bottom: 2vw;
@@ -261,12 +262,12 @@
   }
   .menuIconCircleLeft {
     margin-right: 0.5vw;
-    top: 7vw;
+    top: 6vw;
   }
   .menuIconCircleRight {
     margin-right: 0.5vw;
-    top: 7vw;
-    left: 7vw;
+    top: 6vw;
+    left: 6vw;
   }
   .ownName {
     font-size: 8vw;
@@ -306,10 +307,13 @@
   .menu {
     margin-top: 140px;
     left: 1px;
+    backdrop-filter: blur(0px);
+    background-color: #fff;
   }
   .menuOpen {
     height: 70vw;
     width: 60vw;
+    border: 1px solid #aaa;
   }
   .menuItemList {
     margin-top: 22vw;
@@ -320,5 +324,8 @@
   .menuOpen {
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .menuArea {
+    width: 10vw;
   }
 }
