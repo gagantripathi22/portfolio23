@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, useContext, useCallback } from "react";
 import "../../styles/components/projectSection.css";
 import fetchProjects from "../../sevices/firebase/fetchProjects";
 import { LeftSectionContext } from "../../pages/Home";
@@ -25,9 +25,6 @@ const ProjectSection = () => {
   useEffect(() => {
     fetchProjects(setProjects);
   }, []);
-  useEffect(() => {
-    console.log(projects);
-  }, [projects]);
   return (
     <div className="projectArea">
       <button onClick={() => console.log(projects)}>test</button>

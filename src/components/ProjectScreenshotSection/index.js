@@ -10,20 +10,27 @@ const ProjectSection = () => {
     setCurrentSectionTitle,
     BioDetailSectionAnimatinoHandler,
     NavigateToHome,
+    currentSelectedProjectData,
   } = useContext(LeftSectionContext);
-
-  const [projects, setProjects] = useState([
-    {
-      data: {
-        name: "Loading",
-        tech: "Loading",
-        github: "Loading",
-        website: "Loading",
+  let screenshots = [];
+  if (currentSelectedProjectData.screenshots.length > 1) {
+    screenshots = [
+      {
+        url: currentSelectedProjectData.data.img,
       },
-    },
-  ]);
+
+      ...currentSelectedProjectData.screenshots,
+    ];
+  } else {
+    screenshots = [
+      {
+        url: currentSelectedProjectData.data.img,
+      },
+    ];
+  }
+
   useEffect(() => {
-    fetchProjects(setProjects);
+    console.log("projects : ", screenshots);
   }, []);
   return (
     <div className="projectArea">
@@ -34,11 +41,11 @@ const ProjectSection = () => {
         {/* Go Back */}
         <img src={BackIcon}></img>
       </div>
-      {projects.map((item) => {
+      {screenshots.map((item) => {
         return (
-          <div className="screenshotItem" key={item.id}>
+          <div className="screenshotItem">
             <div className="screenshotImageArea">
-              <img src={item.data.img} className="projectItemImage"></img>
+              <img src={item.url} className="projectItemImage"></img>
             </div>
           </div>
         );
