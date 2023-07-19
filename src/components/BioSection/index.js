@@ -44,17 +44,32 @@ const BioSection = () => {
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const el = skillGradientTopRef.current;
-      // setSkillsListTop(el.scrollTop);
-      console.log(el.offsetTop);
+    const handleWheel = (e) => {
+      e.preventDefault();
+      console.log(e.deltaY);
+      skillsScrollRef.current.scrollTop += e.deltaY;
     };
 
     const element = skillGradientTopRef.current;
-    element.addEventListener("scroll", handleScroll, { passive: true });
+    element.addEventListener("wheel", handleWheel);
 
     return () => {
-      element.removeEventListener("scroll", handleScroll, { passive: true });
+      document.removeEventListener("wheel", handleWheel);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleWheel = (e) => {
+      e.preventDefault();
+      console.log(e.deltaY);
+      skillsScrollRef.current.scrollTop += e.deltaY;
+    };
+
+    const element = skillGradientBottomRef.current;
+    element.addEventListener("wheel", handleWheel);
+
+    return () => {
+      document.removeEventListener("wheel", handleWheel);
     };
   }, []);
 

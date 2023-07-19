@@ -1,4 +1,4 @@
-import React, { useState, createContext, useEffect } from "react";
+import React, { useState, createContext, useEffect, useRef } from "react";
 import "../styles/pages/Home.css";
 import BioSection from "../components/BioSection/index";
 import ProjectDetailSection from "../components/ProjectDetailSection";
@@ -19,12 +19,12 @@ const Home = () => {
   const [currentRightSection, setCurrentRightSection] = useState(0);
   const [currentSelectedProjectData, setCurrentSelectedProjectData] =
     useState(null);
-
-  // useEffect(() => {
-  //   BioDetailSectionAnimatinoHandler();
-  // }, [currentSectionTitle]);
+  const ProjectSectionRef = useRef(null);
 
   const BioDetailSectionAnimatinoHandler = () => {
+    setTimeout(() => {
+      ProjectSectionRef.current.scrollTo({ top: 0 });
+    }, 850);
     setSectionChangeAnimationClass(1);
     setTimeout(() => {
       setCurrentLeftSection(1);
@@ -85,7 +85,7 @@ const Home = () => {
                 : "rightSectionAnimation"
             }
           >
-            <section className="projectsSection">
+            <section className="projectsSection" ref={ProjectSectionRef}>
               {currentRightSection === 0 ? (
                 <ProjectSection />
               ) : (

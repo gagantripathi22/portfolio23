@@ -27,7 +27,6 @@ const ProjectSection = () => {
   }, []);
   return (
     <div className="projectArea">
-      <button onClick={() => console.log(projects)}>test</button>
       {projects.map((item) => {
         return (
           <div className="projectItem" key={item.id}>
