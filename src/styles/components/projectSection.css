@@ -12,10 +12,10 @@
   /* min-height: 500px; */
   max-height: 70vh;
   aspect-ratio: 3/2;
-  background-color: #fff;
+  background-color: var(--background-color);
   margin-bottom: 3.2vw;
   object-fit: contain;
-  border: 0.05vw solid #aaaaaa;
+  border: 0.05vw solid var(--border-color);
   display: flex;
   flex-direction: column;
 }
@@ -46,13 +46,14 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 0 3.2vw;
-  border-top: 0.05vw solid #aaa;
+  border-top: 0.05vw solid var(--border-color);
 }
 
 .projectItemTitle {
   font-size: 1.9vw;
   font-family: "PPNeueMedium";
   cursor: pointer;
+  color: var(--foreground-color);
 }
 
 .projectItemActionBtnList {
@@ -61,8 +62,8 @@
 }
 
 .projectItemActionBtn {
-  background-color: #fff;
-  border: 0.05vw solid #aaa;
+  background-color: var(--background-color);
+  border: 0.05vw solid var(--border-color);
   border-radius: 5px;
   padding: 0.7vw 2vw;
   display: flex;
@@ -80,10 +81,10 @@
   /* min-height: 500px; */
   max-height: 70vh;
   aspect-ratio: 16/9;
-  background-color: #fff;
+  background-color: var(--background-color);
   margin-bottom: 3.2vw;
   object-fit: contain;
-  border: 0.05vw solid #aaaaaa;
+  border: 0.05vw solid var(--border-color);
   display: flex;
   flex-direction: column;
 }
@@ -100,8 +101,8 @@
   right: 1vw;
   top: 1vw;
   padding: 0.5vw;
-  background-color: #ffffff7f;
-  border: 0.05vw solid #aaa;
+  background-color: var(--background-gradient-color);
+  border: 0.05vw solid var(--border-color);
   backdrop-filter: blur(10px);
   border-radius: 5px;
   display: flex;
@@ -122,8 +123,8 @@
   right: 1vw;
   top: 1vw;
   padding: 0.5vw;
-  background-color: #ffffff7f;
-  border: 0.05vw solid #aaa;
+  background-color: var(--background-gradient-color);
+  border: 0.05vw solid var(--border-color);
   backdrop-filter: blur(10px);
   border-radius: 5px;
   display: flex;
@@ -157,7 +158,7 @@
   .screenshotSectionBackBtn {
     padding: 1.5vw;
     font-size: 3.2vw;
-    border: 1px solid #aaa;
+    border: 1px solid var(--border-color);
     margin-bottom: 8vw;
   }
 }

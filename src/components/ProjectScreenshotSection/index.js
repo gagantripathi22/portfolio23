@@ -3,8 +3,9 @@ import "../../styles/components/projectSection.css";
 import fetchProjects from "../../sevices/firebase/fetchProjects";
 import { LeftSectionContext } from "../../pages/Home";
 import BackIcon from "../../assets/back.svg";
+import BackIconDarkMode from "../../assets/back-dark.svg";
 
-const ProjectSection = () => {
+const ProjectSection = ({ theme }) => {
   const {
     currentSectionTitle,
     setCurrentSectionTitle,
@@ -39,7 +40,7 @@ const ProjectSection = () => {
         onClick={() => NavigateToHome()}
       >
         {/* Go Back */}
-        <img src={BackIcon}></img>
+        <img src={BackIconDarkMode}></img>
       </div>
       {screenshots.map((item) => {
         return (

@@ -7,7 +7,7 @@ import ProjectScreenshotSection from "../components/ProjectScreenshotSection";
 
 export const LeftSectionContext = createContext("");
 
-const Home = () => {
+const Home = ({ theme, switchTheme }) => {
   const [currentSectionTitle, setCurrentSectionTitle] = useState("bioSection");
   const [sectionChangeAnimationOffset, setSectionChangeAnimationOffset] =
     useState("translateY(0px)");
@@ -72,9 +72,9 @@ const Home = () => {
           >
             <section className="bioSection">
               {currentLeftSection === 0 ? (
-                <BioSection />
+                <BioSection theme={theme} switchTheme={switchTheme} />
               ) : (
-                <ProjectDetailSection />
+                <ProjectDetailSection theme={theme} switchTheme={switchTheme} />
               )}
             </section>
           </section>
@@ -89,7 +89,7 @@ const Home = () => {
               {currentRightSection === 0 ? (
                 <ProjectSection />
               ) : (
-                <ProjectScreenshotSection />
+                <ProjectScreenshotSection theme={theme} />
               )}
             </section>
           </section>

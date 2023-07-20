@@ -41,7 +41,7 @@
   height: 0.5vw;
   width: 0.5vw;
   border-radius: 15px;
-  background-color: #313131;
+  background-color: var(--foreground-color);
   position: absolute;
   animation-duration: 2s;
   transition: 0.5s;
@@ -78,12 +78,17 @@
 
 .menuArea {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .menu {
-  background-color: #ffffff75;
+  background-color: var(--background-gradient-color);
   backdrop-filter: blur(10px);
-  border: 0.05vw solid #aaa;
+  border: 0.05vw solid var(--border-color);
   position: absolute;
   left: -1vw;
   top: -1vw;
@@ -132,7 +137,7 @@
 .ownName {
   font-size: 1.8vw;
   font-family: "PPNeueMedium";
-  color: #313131;
+  color: var(--foreground-color);
   font-weight: 700;
   padding: 0;
   margin: 0;
@@ -140,7 +145,7 @@
 
 .designation {
   font-family: "PPNeueRegular";
-  color: #313131;
+  color: var(--foreground-color);
   font-size: 1.3vw;
   margin-top: 0.5vw;
 }
@@ -161,8 +166,8 @@
   background: rgb(255, 255, 255);
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 35%,
+    var(--background-color) 0%,
+    var(--background-color) 35%,
     rgba(0, 212, 255, 0) 100%
   );
   width: 100%;
@@ -172,7 +177,7 @@
 }
 
 .skillsGradientTop {
-  top: 4vw;
+  top: 4.3vw;
   left: 0;
 }
 
@@ -185,7 +190,8 @@
 .skillListHeading {
   font-size: 0.8vw;
   font-family: "PPNeueMedium";
-  color: #313131;
+  color: var(--foreground-color);
+  margin-bottom: 5px;
 }
 
 .skillsList {
@@ -206,7 +212,8 @@
 }
 
 .skillsItem {
-  background-color: #f3f3f3;
+  background-color: var(--background-button-color);
+  color: var(--foreground-color);
   border-radius: 5px;
   /* padding: 11px 36px; */
   padding: 0.7vw 2vw;
@@ -223,6 +230,7 @@
   width: 100%;
   padding: 0 3.2vw 3.2vw 3.2vw;
   max-height: 100%;
+  z-index: 99;
 }
 
 .linkList {
@@ -233,8 +241,8 @@
 }
 
 .linkItem {
-  background-color: #fff;
-  border: 0.05vw solid #aaa;
+  background-color: var(--background-color);
+  border: 0.05vw solid var(--border-color);
   border-radius: 5px;
   padding: 0.7vw 2vw;
   display: flex;
@@ -245,6 +253,18 @@
   margin-right: 0.5vw;
   font-size: 0.7vw;
   cursor: pointer;
+}
+
+.themeSwitchBtnArea {
+  margin-left: 2vw;
+  height: calc(100%);
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+
+.themeSwitch {
+  height: 100%;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -293,7 +313,7 @@
   .linkItem {
     padding: 2.8vw 8vw;
     font-size: 3.2vw;
-    border: 1px solid #aaa;
+    border: 1px solid var(--border-color);
     margin-right: 8px;
   }
   @keyframes menuHoverAnimation {
@@ -308,12 +328,12 @@
     margin-top: 140px;
     left: 1px;
     backdrop-filter: blur(0px);
-    background-color: #fff;
+    background-color: var(--background-gradient-color);
   }
   .menuOpen {
     height: 70vw;
     width: 60vw;
-    border: 1px solid #aaa;
+    border: 1px solid var(--border-color);
   }
   .menuItemList {
     margin-top: 22vw;
@@ -325,7 +345,8 @@
     padding-left: 10px;
     padding-right: 10px;
   }
-  .menuArea {
-    width: 10vw;
+  .themeSwitchBtnArea {
+    height: 10vw;
+    margin-bottom: 4vw;
   }
 }

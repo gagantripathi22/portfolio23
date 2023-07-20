@@ -2,6 +2,7 @@
   height: 100%;
   width: 100%;
   margin-top: 0;
+  background-color: var(--background-color);
 }
 
 .mainBorders {
@@ -12,14 +13,14 @@
   position: absolute;
   height: 100%;
   width: 0.05vw;
-  background-color: #aaa;
+  background-color: var(--border-color);
 }
 
 .lineHorizontal {
   position: absolute;
   height: 0.05vw;
   width: 100%;
-  background-color: #aaa;
+  background-color: var(--border-color);
 }
 
 .lineVerticleLeft {
@@ -50,7 +51,7 @@
   height: 3vw;
   width: 90vw;
   backdrop-filter: blur(10px);
-  background-color: #ffffff29;
+  background-color: var(--background-gradient-color);
   margin-left: 5vw;
   position: absolute;
 }
@@ -80,7 +81,7 @@
 .bioSection {
   width: 30vw;
   height: calc(100% - 6vw);
-  border-right: 0.05vw solid #aaa;
+  border-right: 0.05vw solid var(--border-color);
   margin-top: 3vw;
 }
 
@@ -135,6 +136,10 @@
   .innerSections {
     flex-direction: column;
     height: auto;
+    background-color: var(--background-color);
+    margin: 0;
+    width: 100vw;
+    padding: 10px 10px;
   }
   .bioSection {
     width: 94vw;
@@ -144,6 +149,9 @@
     width: 94vw;
   }
   .mainBorders {
+    display: none;
+  }
+  .horizontalGradientBorder {
     display: none;
   }
 }

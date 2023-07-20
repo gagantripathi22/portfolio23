@@ -35,14 +35,16 @@ html,
   width: 100%;
   padding: 0;
   margin: 0;
+  background-color: var(--background-color);
 }
 
 * {
   box-sizing: border-box;
+  transition: 0.2s;
 }
 
 a {
-  color: black;
+  color: var(--foreground-color);
 }
 
 a:link {
@@ -59,4 +61,20 @@ a:hover {
 
 a:active {
   text-decoration: none;
+}
+
+:root {
+  --background-color: #fff;
+  --foreground-color: #313131;
+  --border-color: #aaa;
+  --background-gradient-color: #ffffff29;
+  --background-button-color: #f3f3f3;
+}
+
+[data-theme="dark"] {
+  --background-color: #1c1c1c;
+  --foreground-color: #ffffff;
+  --border-color: #555555;
+  --background-gradient-color: #1c1c1c29;
+  --background-button-color: #0c0c0c;
 }

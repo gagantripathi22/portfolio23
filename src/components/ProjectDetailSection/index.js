@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef, useContext } from "react";
 import "../../styles/components/bioSection.scss";
 import { LeftSectionContext } from "../../pages/Home";
 
-const BioSection = () => {
+const BioSection = ({ theme, switchTheme }) => {
   const {
     currentSectionTitle,
     setCurrentSectionTitle,

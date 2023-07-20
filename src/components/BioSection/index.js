@@ -1,13 +1,15 @@
 import React, { useEffect, useState, useRef, useContext } from "react";
 import "../../styles/components/bioSection.scss";
 import { LeftSectionContext } from "../../pages/Home";
+import ThemeSwitchIcon from "../../assets/theme-switch.svg";
+import ThemeSwitchFilledIcon from "../../assets/theme-switch-filled.svg";
 
-const BioSection = () => {
+const BioSection = ({ theme, switchTheme }) => {
   const { currentSectionTitle, setCurrentSectionTitle } =
     useContext(LeftSectionContext);
 
   const tempSkills =
-    "React, Next 13, Node, Express, Redux, JavaScript, HTML5, Tailwind CSS, CSS, React Native, Flutter, Electron, Dart, Git, Firebase, MongoDB Atlas, REST API, C++, MySQL, MongoDB, SQLite, Sequelize, PhpMyAdmin, Mongoose, Visual Studio Code, Android Studio, Postman";
+    "React, Next 13, Node, Express, JavaScript, React Native, Flutter, Redux, REST API, Electron, Dart, HTML5, Tailwind CSS, Bootstrap, CSS, Git, Firebase, MongoDB Atlas, REST API, C++, MySQL, MongoDB, SQLite, Sequelize, Mongoose, PhpMyAdmin, Docker, Visual Studio Code, Android Studio, Postman";
 
   const [skills, setSkills] = useState(tempSkills.split(", "));
 
@@ -124,6 +126,17 @@ const BioSection = () => {
                 <div className="menuItem">Profolio V1</div>
               </a>
             </div>
+          </div>
+          <div
+            className="themeSwitchBtnArea"
+            onClick={() => {
+              switchTheme();
+            }}
+          >
+            <img
+              className="themeSwitch"
+              src={theme === "dark" ? ThemeSwitchFilledIcon : ThemeSwitchIcon}
+            ></img>
           </div>
         </div>
       </div>
