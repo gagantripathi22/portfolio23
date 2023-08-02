@@ -78,8 +78,23 @@ const BioSection = ({ theme, switchTheme }) => {
       <div className="bioHeader">
         <div className="menuArea">
           <div className="menuButtons">
-            <div className="menuBtn">Portfolio V1</div>
-            <div className="menuBtn">Dark Mode</div>
+            <div className="menuBtn">
+              <a
+                href="https://gagantripathi22.github.io/portfolio/"
+                target="_blank"
+              >
+                Portfolio V1
+              </a>
+            </div>
+            <div className="menuBtn"
+              onClick={() => {
+                switchTheme();
+              }}
+            >
+              <a>
+                {theme === "dark" ? "Light Mode" : "Dark Mode"}
+              </a>
+            </div>
           </div>
         </div>
       </div>

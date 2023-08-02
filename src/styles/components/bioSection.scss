@@ -289,7 +289,7 @@
 .menuBtn {
   font-family: RobotoMonoMedium;
   font-size: .8vw;
-  border-right: 0.05vw solid ;
+  border-right: 0.05vw solid var(--border-color);
   padding-right: 1vw;
   cursor: pointer;
 }

@@ -108,7 +108,7 @@ const BioSection = ({ theme, switchTheme }) => {
               }}
             >
               <a>
-                {theme === "dark" ? "Dark Mode" : "Light Mode"}
+                {theme === "dark" ? "Light Mode" : "Dark Mode"}
               </a>
             </div>
           </div>
