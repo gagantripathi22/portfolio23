@@ -38,7 +38,7 @@ const ProjectSection = () => {
               }}
             >
               <div className="expandBtn" title="Expand">
-                <img src={ExpandIcon}></img>
+                <img className="expandIcon" src={ExpandIcon}></img>
               </div>
               <img src={item.data.img} className="projectItemImage"></img>
             </div>

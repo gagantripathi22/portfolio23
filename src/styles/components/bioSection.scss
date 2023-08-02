@@ -10,7 +10,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  padding: 3.2vw 3.2vw;
+  padding: 1.8vw 2.5vw;
 }
 
 .menuIconGroup {
@@ -21,6 +21,12 @@
   height: calc(0.5vw + 0.8vw);
   width: calc(0.5vw + 0.8vw);
   z-index: 71;
+}
+
+.menuIcon {
+  height: 25px;
+  cursor: pointer;
+
 }
 
 @keyframes menuHoverAnimation {
@@ -81,17 +87,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
 }
 
 .menu {
   background-color: var(--background-gradient-color);
-  backdrop-filter: blur(10px);
-  border: 0.05vw solid var(--border-color);
+  border: 1px solid var(--border-color);
   position: absolute;
-  left: -1vw;
-  top: -1vw;
+  top: 2vw;
   z-index: 31;
   transition: 0.4s;
   padding-left: 15px;
@@ -115,12 +118,12 @@
 .menuItemList {
   opacity: 0;
   transition: 0.4s;
-  margin-top: 3vw;
+  margin-top: 1vw;
 }
 
 .menuItemListVisible {
   opacity: 1;
-  margin-top: 4vw;
+  margin-top: 2vw;
 }
 
 .menuOpen {
@@ -130,12 +133,12 @@
 }
 
 .nameAndDiscord {
-  padding: 0 3.2vw;
+  padding: 0 2.5vw;
   width: 100%;
 }
 
 .ownName {
-  font-size: 1.8vw;
+  font-size: 1.6vw;
   font-family: "PPNeueMedium";
   color: var(--foreground-color);
   font-weight: 700;
@@ -144,16 +147,26 @@
 }
 
 .designation {
+  font-family: "PPNeueMedium";
+  color: var(--foreground-color);
+  font-size: 1.1vw;
+  margin-top: 0.5vw;
+}
+
+.about {
   font-family: "PPNeueRegular";
   color: var(--foreground-color);
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   margin-top: 0.5vw;
+  margin-top: 2.5vw;
+  line-height: 1.6vw;
+  letter-spacing: .1px;
 }
 
 .skillsArea {
   width: 100%;
   // padding: 3.2vw 3.2vw;
-  padding: 3.2vw 3.2vw 0 3.2vw;
+  padding: 2.5vw 2.5vw 0 2.5vw;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -177,7 +190,7 @@
 }
 
 .skillsGradientTop {
-  top: 4.3vw;
+  top: 3.5vw;
   left: 0;
 }
 
@@ -228,7 +241,7 @@
 
 .linksArea {
   width: 100%;
-  padding: 0 3.2vw 3.2vw 3.2vw;
+  padding: 0 2.5vw 3.2vw 2.5vw;
   max-height: 100%;
   z-index: 99;
 }
@@ -267,9 +280,28 @@
   width: 100%;
 }
 
+.menuButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menuBtn {
+  font-family: RobotoMonoMedium;
+  font-size: .8vw;
+  border-right: 0.05vw solid ;
+  padding-right: 1vw;
+  cursor: pointer;
+}
+
+.menuBtn:not(:first-child) {
+  padding-left: 1vw;
+  border-right: none;
+}
+
 @media (max-width: 768px) {
   .bioHeader {
-    margin-top: 90px;
+    // margin-top: 20px;
   }
   .menuIconCircle {
     height: 2.2vw;
@@ -290,25 +322,32 @@
     left: 6vw;
   }
   .ownName {
-    font-size: 8vw;
+    font-size: 6.5vw;
+    letter-spacing: normal;
+    margin-top: 4vw;
   }
   .designation {
-    font-size: 6vw;
-    margin-top: 8px;
+    font-size: 4.8vw;
+    margin-top: 2px;
+  }
+  .about {
+    font-size: 5vw;
+    margin-top: 7vw;
+    line-height: 7vw;
   }
   .menuIconGroup {
     height: 12vw;
   }
   .bioHeader {
-    padding-top: 50px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 35px;
   }
   .skillsArea {
     display: none;
   }
   .linksArea {
-    padding-top: 30px;
-    padding-bottom: 10px;
+    padding-top: 8vw;
+    padding-bottom: 34px;
   }
   .linkItem {
     padding: 2.8vw 8vw;
@@ -348,5 +387,12 @@
   .themeSwitchBtnArea {
     height: 10vw;
     margin-bottom: 4vw;
+  }
+  .menuBtn {
+    font-size: 3vw;
+    padding-right: 4vw;
+  }
+  .menuBtn:not(:first-child) {
+    padding-left: 4vw;
   }
 }

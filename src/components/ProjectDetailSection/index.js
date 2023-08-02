@@ -77,40 +77,9 @@ const BioSection = ({ theme, switchTheme }) => {
     <div className="bioArea">
       <div className="bioHeader">
         <div className="menuArea">
-          <div
-            className="menuIconGroup"
-            onClick={() => setIsMenuOpen((prev) => !prev)}
-          >
-            <div
-              className={`${
-                menuIconStateClass ? "menuIconCircleAnimation" : ""
-              } menuIconCircle menuIconCircleTop`}
-            ></div>
-            <div
-              className={`${
-                menuIconStateClass ? "menuIconCircleAnimation" : ""
-              } menuIconCircle menuIconCircleLeft`}
-            ></div>
-            <div
-              className={`${
-                menuIconStateClass ? "menuIconCircleAnimation" : ""
-              } menuIconCircle menuIconCircleRight`}
-            ></div>
-          </div>
-          <div className={isMenuOpen ? "menu menuOpen" : "menu menuClose"}>
-            <div
-              // style={{ display: isMenuOpen ? "flex" : "none" }}
-              className={
-                isMenuOpen ? "menuItemList menuItemListVisible" : "menuItemList"
-              }
-            >
-              <a
-                href="https://gagantripathi22.github.io/portfolio/"
-                target="_blank"
-              >
-                <div className="menuItem">Profolio V1</div>
-              </a>
-            </div>
+          <div className="menuButtons">
+            <div className="menuBtn">Portfolio V1</div>
+            <div className="menuBtn">Dark Mode</div>
           </div>
         </div>
       </div>

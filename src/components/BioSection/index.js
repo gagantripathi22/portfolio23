@@ -3,6 +3,7 @@ import "../../styles/components/bioSection.scss";
 import { LeftSectionContext } from "../../pages/Home";
 import ThemeSwitchIcon from "../../assets/theme-switch.svg";
 import ThemeSwitchFilledIcon from "../../assets/theme-switch-filled.svg";
+import MenuIcon from '../../assets/menu.svg'
 
 const BioSection = ({ theme, switchTheme }) => {
   const { currentSectionTitle, setCurrentSectionTitle } =
@@ -92,57 +93,31 @@ const BioSection = ({ theme, switchTheme }) => {
     <div className="bioArea">
       <div className="bioHeader">
         <div className="menuArea">
-          <div
-            className="menuIconGroup"
-            onClick={() => setIsMenuOpen((prev) => !prev)}
-          >
-            <div
-              className={`${
-                menuIconStateClass ? "menuIconCircleAnimation" : ""
-              } menuIconCircle menuIconCircleTop`}
-            ></div>
-            <div
-              className={`${
-                menuIconStateClass ? "menuIconCircleAnimation" : ""
-              } menuIconCircle menuIconCircleLeft`}
-            ></div>
-            <div
-              className={`${
-                menuIconStateClass ? "menuIconCircleAnimation" : ""
-              } menuIconCircle menuIconCircleRight`}
-            ></div>
-          </div>
-          <div className={isMenuOpen ? "menu menuOpen" : "menu menuClose"}>
-            <div
-              // style={{ display: isMenuOpen ? "flex" : "none" }}
-              className={
-                isMenuOpen ? "menuItemList menuItemListVisible" : "menuItemList"
-              }
-            >
+          <div className="menuButtons">
+            <div className="menuBtn">
               <a
                 href="https://gagantripathi22.github.io/portfolio/"
                 target="_blank"
               >
-                <div className="menuItem">Profolio V1</div>
+                Portfolio V1
               </a>
             </div>
-          </div>
-          <div
-            className="themeSwitchBtnArea"
-            onClick={() => {
-              switchTheme();
-            }}
-          >
-            <img
-              className="themeSwitch"
-              src={theme === "dark" ? ThemeSwitchFilledIcon : ThemeSwitchIcon}
-            ></img>
+            <div className="menuBtn"
+              onClick={() => {
+                switchTheme();
+              }}
+            >
+              <a>
+                {theme === "dark" ? "Dark Mode" : "Light Mode"}
+              </a>
+            </div>
           </div>
         </div>
       </div>
       <div className="nameAndDiscord">
         <h1 className="ownName">Gagan Tripathi</h1>
-        <div className="designation">Developer</div>
+        <div className="designation">Full-Stack Developer</div>
+        <div className="about">As a full-stack web developer, I specialize in building web and mobile applications using React, JavaScript, React Native, Node, Express, and Next. With a good understanding of SQL and NoSQL, I am passionate about building intuitive and responsive user interfaces and writing efficient, scalable, and maintainable code.</div>
         <div className="discordStatus"></div>
       </div>
       <div className="skillsArea">

@@ -14,12 +14,12 @@
 }
 
 @font-face {
-  font-family: "RobotoMonoMedium";
+  font-family: "RobotoMonoRegular";
   src: url("../public//fonts//RobotoMono-Regular.ttf");
 }
 
 @font-face {
-  font-family: "RobotoMonoMedium";
+  font-family: "RobotoMonoLight";
   src: url("../public//fonts//RobotoMono-Light.ttf");
 }
 
@@ -41,10 +41,14 @@ html,
 * {
   box-sizing: border-box;
   transition: 0.2s;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
   color: var(--foreground-color);
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 a:link {
@@ -66,15 +70,15 @@ a:active {
 :root {
   --background-color: #fff;
   --foreground-color: #313131;
-  --border-color: #aaa;
-  --background-gradient-color: #ffffff29;
+  --border-color: #d1d1d1;
+  --background-gradient-color: #ffffff;
   --background-button-color: #f3f3f3;
 }
 
 [data-theme="dark"] {
   --background-color: #1c1c1c;
   --foreground-color: #ffffff;
-  --border-color: #555555;
+  --border-color: #393939;
   --background-gradient-color: #1c1c1c29;
   --background-button-color: #0c0c0c;
 }
