@@ -40,7 +40,7 @@ const ProjectSection = ({ theme }) => {
         onClick={() => NavigateToHome()}
       >
         {/* Go Back */}
-        <img src={BackIconDarkMode}></img>
+        <img src={theme === 'dark' ? BackIconDarkMode : BackIcon}></img>
       </div>
       {screenshots.map((item) => {
         return (
