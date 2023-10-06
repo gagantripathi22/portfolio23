@@ -97,10 +97,11 @@
 }
 
 .screenshotSectionBackBtn {
-  position: absolute;
-  right: 1vw;
-  top: 1vw;
-  padding: 0.5vw;
+  padding: 1vw;
+  height: 2.8vw;
+  width: 2.8vw;
+  min-height: 2.8vw;
+  min-width: 2.8vw;
   background-color: var(--background-gradient-color);
   border: 0.05vw solid var(--border-color);
   backdrop-filter: blur(10px);
@@ -114,8 +115,45 @@
   position: sticky;
   top: 6.2vw;
   left: 3.3vw;
-  margin-bottom: 4vw;
   cursor: pointer;
+}
+
+.actionBtns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 4vw;
+  position: fixed;
+}
+
+.linksSection {
+  position: sticky;
+  top: 6.2vw;
+  left: 3.3vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: .75vw;
+}
+
+.linkBtn {
+  padding: 0.5vw;
+  background-color: var(--background-gradient-color);
+  border: 0.05vw solid var(--border-color);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* max-width: fit-content; */
+  font-family: RobotoMonoMedium;
+  font-size: 0.7vw;
+  color: var(--foreground-color);
+  /* margin-bottom: 4vw; */
+  min-height: 2.8vw;
+  padding: 0 2vw;
+  cursor: pointer;
+  margin-left: .5vw;
 }
 
 .expandBtn {
