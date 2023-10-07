@@ -34,7 +34,7 @@ const ProjectSection = ({ theme }) => {
     console.log('projects : ', screenshots);
   }, []);
   return (
-    <div className="projectArea">
+    <div className="projectScreenshotArea">
       <section className="actionBtns">
         <div
           className="screenshotSectionBackBtn"

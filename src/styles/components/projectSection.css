@@ -7,6 +7,15 @@
   position: relative;
 }
 
+.projectScreenshotArea {
+  width: 66vw;
+  height: auto;
+  padding: calc(8.5vw + 2vw) 2.5vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
 .projectItem {
   width: 100%;
   /* min-height: 500px; */
@@ -124,6 +133,8 @@
   align-items: center;
   margin-bottom: 4vw;
   position: fixed;
+  top: 5vw;
+  /* left: 1vw; */
 }
 
 .linksSection {
@@ -133,7 +144,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: .75vw;
+  margin-left: .1vw;
 }
 
 .linkBtn {
@@ -179,6 +190,9 @@
 
 @media (max-width: 768px) {
   .projectArea {
+    width: 94vw;
+  }
+  .projectScreenshotArea {
     width: 94vw;
   }
   .projectItemTitle {
