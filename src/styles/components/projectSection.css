@@ -189,6 +189,9 @@
 }
 
 @media (max-width: 768px) {
+  .actionBtns {
+    display: none;
+  }
   .projectArea {
     width: 94vw;
   }

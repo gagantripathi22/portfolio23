@@ -1,21 +1,23 @@
-import React, { useEffect, useState, useRef, useContext } from "react";
-import "../../styles/components/bioSection.scss";
-import { LeftSectionContext } from "../../pages/Home";
+import React, { useEffect, useState, useRef, useContext } from 'react';
+import '../../styles/components/bioSection.scss';
+import { LeftSectionContext } from '../../pages/Home';
+import BackIconDarkMode from '../../assets/back-dark.svg';
 
 const BioSection = ({ theme, switchTheme }) => {
   const {
     currentSectionTitle,
     setCurrentSectionTitle,
+    NavigateToHome,
     currentSelectedProjectData,
   } = useContext(LeftSectionContext);
 
   const tempSkills = currentSelectedProjectData.data.tech;
 
-  const [skills, setSkills] = useState(tempSkills.split(", "));
+  const [skills, setSkills] = useState(tempSkills.split(', '));
 
   const [links, setLinks] = useState([
-    { name: "GitHub", link: "https://github.com/gagantripathi22/" },
-    { name: "LinkedIn", link: "http://linkedin.com/in/gagantripathi22/" },
+    { name: 'GitHub', link: 'https://github.com/gagantripathi22/' },
+    { name: 'LinkedIn', link: 'http://linkedin.com/in/gagantripathi22/' },
   ]);
 
   const [skillsListTop, setSkillsListTop] = useState(0);
@@ -38,10 +40,10 @@ const BioSection = ({ theme, switchTheme }) => {
     };
 
     const element = skillsScrollRef.current;
-    element.addEventListener("scroll", handleScroll);
+    element.addEventListener('scroll', handleScroll);
 
     return () => {
-      element.removeEventListener("scroll", handleScroll);
+      element.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -53,10 +55,10 @@ const BioSection = ({ theme, switchTheme }) => {
     };
 
     const element = skillGradientTopRef.current;
-    element.addEventListener("scroll", handleScroll, { passive: true });
+    element.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
-      element.removeEventListener("scroll", handleScroll, { passive: true });
+      element.removeEventListener('scroll', handleScroll, { passive: true });
     };
   }, []);
 
@@ -86,14 +88,13 @@ const BioSection = ({ theme, switchTheme }) => {
                 Portfolio V1
               </a>
             </div>
-            <div className="menuBtn"
+            <div
+              className="menuBtn"
               onClick={() => {
                 switchTheme();
               }}
             >
-              <a>
-                {theme === "dark" ? "Light Mode" : "Dark Mode"}
-              </a>
+              <a>{theme === 'dark' ? 'Light Mode' : 'Dark Mode'}</a>
             </div>
           </div>
         </div>
@@ -123,6 +124,10 @@ const BioSection = ({ theme, switchTheme }) => {
         ></div>
       </div>
       <div className="linksArea">
+        <div className="bioSectionBackBtn" onClick={() => NavigateToHome()}>
+          {/* Go Back */}
+          <img src={BackIconDarkMode}></img>
+        </div>
         <div className="linkList">
           {currentSelectedProjectData.data.github && (
             <a href={currentSelectedProjectData.data.github} target="_blank">
