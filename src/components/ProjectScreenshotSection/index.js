@@ -41,7 +41,7 @@ const ProjectSection = ({ theme }) => {
           onClick={() => NavigateToHome()}
         >
           {/* Go Back */}
-          <img src={BackIconDarkMode}></img>
+          <img src={theme === 'dark' ? BackIconDarkMode : BackIcon}></img>
         </div>
         <div className="linksSection">
           <div className="linkBtn">Download</div>
