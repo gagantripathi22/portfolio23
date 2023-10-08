@@ -44,8 +44,21 @@ const ProjectSection = ({ theme }) => {
           <img src={theme === 'dark' ? BackIconDarkMode : BackIcon}></img>
         </div>
         <div className="linksSection">
-          <div className="linkBtn">Download</div>
-          <div className="linkBtn">Visit</div>
+          {currentSelectedProjectData.data.github && (
+            <a href={currentSelectedProjectData.data.github} target="_blank">
+              <div className="linkBtn">GitHub</div>
+            </a>
+          )}
+          {currentSelectedProjectData.data.website && (
+            <a href={currentSelectedProjectData.data.website} target="_blank">
+              <div className="linkBtn">Visit</div>
+            </a>
+          )}
+          {currentSelectedProjectData.data.download && (
+            <a href={currentSelectedProjectData.data.download} target="_blank">
+              <div className="linkBtn">Download</div>
+            </a>
+          )}
         </div>
       </section>
 
