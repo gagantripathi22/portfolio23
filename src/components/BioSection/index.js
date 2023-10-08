@@ -1,22 +1,22 @@
-import React, { useEffect, useState, useRef, useContext } from "react";
-import "../../styles/components/bioSection.scss";
-import { LeftSectionContext } from "../../pages/Home";
-import ThemeSwitchIcon from "../../assets/theme-switch.svg";
-import ThemeSwitchFilledIcon from "../../assets/theme-switch-filled.svg";
-import MenuIcon from '../../assets/menu.svg'
+import React, { useEffect, useState, useRef, useContext } from 'react';
+import '../../styles/components/bioSection.scss';
+import { LeftSectionContext } from '../../pages/Home';
+import ThemeSwitchIcon from '../../assets/theme-switch.svg';
+import ThemeSwitchFilledIcon from '../../assets/theme-switch-filled.svg';
+import MenuIcon from '../../assets/menu.svg';
 
 const BioSection = ({ theme, switchTheme }) => {
   const { currentSectionTitle, setCurrentSectionTitle } =
     useContext(LeftSectionContext);
 
   const tempSkills =
-    "React, Next 13, Node, Express, JavaScript, React Native, Flutter, Redux, REST API, Electron, Dart, HTML5, Tailwind CSS, Bootstrap, CSS, Git, Firebase, MongoDB Atlas, REST API, C++, MySQL, MongoDB, SQLite, Sequelize, Mongoose, PhpMyAdmin, Docker, Visual Studio Code, Android Studio, Postman";
+    'React, Next 13, Node, Express, JavaScript, React Native, Flutter, Redux, REST API, Electron, Dart, HTML5, Tailwind CSS, Bootstrap, CSS, Git, Firebase, MongoDB Atlas, REST API, C++, MySQL, MongoDB, SQLite, Sequelize, Mongoose, PhpMyAdmin, Docker, Visual Studio Code, Android Studio, Postman';
 
-  const [skills, setSkills] = useState(tempSkills.split(", "));
+  const [skills, setSkills] = useState(tempSkills.split(', '));
 
   const [links, setLinks] = useState([
-    { name: "GitHub", link: "https://github.com/gagantripathi22/" },
-    { name: "LinkedIn", link: "http://linkedin.com/in/gagantripathi22/" },
+    { name: 'GitHub', link: 'https://github.com/gagantripathi22/' },
+    { name: 'LinkedIn', link: 'http://linkedin.com/in/gagantripathi22/' },
   ]);
 
   const [skillsListTop, setSkillsListTop] = useState(0);
@@ -39,10 +39,10 @@ const BioSection = ({ theme, switchTheme }) => {
     };
 
     const element = skillsScrollRef.current;
-    element.addEventListener("scroll", handleScroll);
+    element.addEventListener('scroll', handleScroll);
 
     return () => {
-      element.removeEventListener("scroll", handleScroll);
+      element.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -54,10 +54,10 @@ const BioSection = ({ theme, switchTheme }) => {
     };
 
     const element = skillGradientTopRef.current;
-    element.addEventListener("wheel", handleWheel);
+    element.addEventListener('wheel', handleWheel);
 
     return () => {
-      document.removeEventListener("wheel", handleWheel);
+      document.removeEventListener('wheel', handleWheel);
     };
   }, []);
 
@@ -69,10 +69,10 @@ const BioSection = ({ theme, switchTheme }) => {
     };
 
     const element = skillGradientBottomRef.current;
-    element.addEventListener("wheel", handleWheel);
+    element.addEventListener('wheel', handleWheel);
 
     return () => {
-      document.removeEventListener("wheel", handleWheel);
+      document.removeEventListener('wheel', handleWheel);
     };
   }, []);
 
@@ -102,14 +102,13 @@ const BioSection = ({ theme, switchTheme }) => {
                 Portfolio V1
               </a>
             </div>
-            <div className="menuBtn"
+            <div
+              className="menuBtn"
               onClick={() => {
                 switchTheme();
               }}
             >
-              <a>
-                {theme === "dark" ? "Light Mode" : "Dark Mode"}
-              </a>
+              <a>{theme === 'dark' ? 'Light Mode' : 'Dark Mode'}</a>
             </div>
           </div>
         </div>
@@ -117,7 +116,13 @@ const BioSection = ({ theme, switchTheme }) => {
       <div className="nameAndDiscord">
         <h1 className="ownName">Gagan Tripathi</h1>
         <div className="designation">Full-Stack Developer</div>
-        <div className="about">As a full-stack web developer, I specialize in building web and mobile applications using React, JavaScript, React Native, Node, Express, and Next. With a good understanding of SQL and NoSQL, I am passionate about building intuitive and responsive user interfaces and writing efficient, scalable, and maintainable code.</div>
+        <div className="about">
+          As a full-stack web developer, I specialize in building web and mobile
+          applications using React, JavaScript, React Native, Node, Express, and
+          Next. With a good understanding of SQL and NoSQL, I am passionate
+          about building intuitive and responsive user interfaces and writing
+          efficient, scalable, and maintainable code.
+        </div>
         <div className="discordStatus"></div>
       </div>
       <div className="skillsArea">
@@ -137,7 +142,7 @@ const BioSection = ({ theme, switchTheme }) => {
           ref={skillGradientBottomRef}
         ></div>
       </div>
-      <div className="linksArea">
+      <div className="linksAreaBio">
         <div className="linkList">
           {links.map((item) => {
             return (
