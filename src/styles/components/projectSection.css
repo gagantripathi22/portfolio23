@@ -27,6 +27,47 @@
   border: 0.05vw solid var(--border-color);
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+}
+
+.projectItemTitleHoverUnderline {
+  height: 2px;
+  width: 0px;
+  background-color: var(--foreground-color);
+  transform: .5s;
+}
+
+@keyframes underlineAnimation {
+  0% {
+    width: 0%;
+    float: left;
+  }
+  16.66% {
+    width: 20%;
+    float: left;
+  }
+  33.32%{
+    width: 100%;
+    float: left;
+  }
+  49.98%{
+    width: 100%;
+    float: right;
+  }
+  66.64% {
+    width: 20%;
+    float: right;
+  }
+  100% {
+    width: 0%;
+    float: right;
+  }
+}
+
+.projectItem:hover .projectItemTitleHoverUnderline{
+  /* width: 100%; */
+  animation: underlineAnimation 4s infinite steps(2);
+  animation-timing-function: ease;
 }
 
 .projectItem:last-child {
@@ -63,6 +104,7 @@
   font-family: "PPNeueMedium";
   cursor: pointer;
   color: var(--foreground-color);
+  margin: 5px 0;
 }
 
 .projectItemActionBtnList {

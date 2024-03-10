@@ -29,7 +29,13 @@ const ProjectSection = () => {
     <div className="projectArea">
       {projects.map((item) => {
         return (
-          <div className="projectItem" key={item.id}>
+          <div className="projectItem" 
+            onClick={() => {
+              BioDetailSectionAnimatinoHandler();
+              setCurrentSelectedProjectData(item);
+            }}
+            key={item.id}
+          >
             <div
               className="projectItemImageArea"
               onClick={() => {
@@ -43,15 +49,18 @@ const ProjectSection = () => {
               <img src={item.data.img} className="projectItemImage"></img>
             </div>
             <div className="projectItemDetailArea">
-              <h1
-                className="projectItemTitle"
-                onClick={() => {
-                  BioDetailSectionAnimatinoHandler();
-                  setCurrentSelectedProjectData(item);
-                }}
-              >
-                {item.data.name}
-              </h1>
+              <div>
+                <h1
+                  className="projectItemTitle"
+                  // onClick={() => {
+                  //   BioDetailSectionAnimatinoHandler();
+                  //   setCurrentSelectedProjectData(item);
+                  // }}
+                >
+                  {item.data.name}
+                </h1>
+                <div className="projectItemTitleHoverUnderline"></div>
+              </div>
               <div className="projectItemActionBtnList">
                 {item.data.github && (
                   <a href={item.data.github} target="_blank">
