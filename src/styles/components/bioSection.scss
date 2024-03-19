@@ -200,11 +200,13 @@
   transform: rotate(180deg);
 }
 
-.skillListHeading {
-  font-size: 0.8vw;
+.sectionHeading {
+  font-size: .8vw;
   font-family: "PPNeueMedium";
-  color: var(--foreground-color);
+  color: rgb(123, 123, 123);
   margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: .1vw;
 }
 
 .skillsList {
@@ -227,7 +229,7 @@
 .skillsItem {
   background-color: var(--background-button-color);
   color: var(--foreground-color);
-  border-radius: 5px;
+  border-radius: 7px;
   /* padding: 11px 36px; */
   padding: 0.7vw 2vw;
   display: flex;
@@ -242,7 +244,7 @@
 .bioSectionBackBtn {
   background-color: var(--background-color);
   border: 1px solid var(--border-color);
-  border-radius: 5px;
+  border-radius: 7px;
   padding: 0.7vw 2vw;
   display: flex;
   align-items: center;
@@ -277,12 +279,13 @@
   flex-direction: row;
   width: fit-content;
   height: fit-content;
+  margin-top: 1vw;
 }
 
 .linkItem {
   background-color: var(--background-color);
   border: 0.05vw solid var(--border-color);
-  border-radius: 5px;
+  border-radius: 7px;
   padding: 0.7vw 2vw;
   display: flex;
   align-items: center;

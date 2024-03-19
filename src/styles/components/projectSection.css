@@ -24,7 +24,7 @@
   background-color: var(--background-color);
   margin-bottom: 3.2vw;
   object-fit: contain;
-  border: 0.05vw solid var(--border-color);
+  /* border: 0.05vw solid var(--border-color); */
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -34,7 +34,7 @@
   height: 2px;
   width: 0px;
   background-color: var(--foreground-color);
-  transform: .5s;
+  transform: 2s;
 }
 
 @keyframes underlineAnimation {
@@ -70,6 +70,12 @@
   animation-timing-function: ease;
 }
 
+.projectItem:hover .projectItemImageArea {
+  -webkit-box-shadow: 0px 7px 20px -2px rgba(0,0,0,0.63);
+-moz-box-shadow: 0px 7px 20px -2px rgba(0,0,0,0.63);
+box-shadow: 0px 7px 20px -2px rgba(0,0,0,0.63);
+}
+
 .projectItem:last-child {
   margin-bottom: 0px;
 }
@@ -81,11 +87,15 @@
   text-align: center;
   cursor: pointer;
   position: relative;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 7px 20px -9px rgba(0,0,0,1);
+-moz-box-shadow: 0px 7px 20px -9px rgba(0,0,0,1);
+box-shadow: 0px 7px 20px -9px rgba(0,0,0,1);
 }
 
 .projectItemImage {
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
   object-fit: cover;
 }
 
@@ -95,8 +105,7 @@
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 3.2vw;
-  border-top: 0.05vw solid var(--border-color);
+  /* padding: 0 3.2vw; */
 }
 
 .projectItemTitle {
@@ -107,6 +116,12 @@
   margin: 5px 0;
 }
 
+.projectItemType {
+  font-size: 1.3vw;
+  font-family: "PPNeueRegular";
+  color: rgb(123, 123, 123);
+}
+
 .projectItemActionBtnList {
   display: flex;
   flex-direction: row;
@@ -115,7 +130,7 @@
 .projectItemActionBtn {
   background-color: var(--background-color);
   border: 0.05vw solid var(--border-color);
-  border-radius: 5px;
+  border-radius: 7px;
   padding: 0.7vw 2vw;
   display: flex;
   align-items: center;
@@ -135,7 +150,7 @@
   background-color: var(--background-color);
   margin-bottom: 3.2vw;
   object-fit: contain;
-  border: 0.05vw solid var(--border-color);
+  /* border: 0.05vw solid var(--border-color); */
   display: flex;
   flex-direction: column;
 }
@@ -145,6 +160,7 @@
   width: 100%;
   overflow: hidden;
   text-align: center;
+  border-radius: 7px
 }
 
 .screenshotSectionBackBtn {
@@ -156,7 +172,7 @@
   background-color: var(--background-gradient-color);
   border: 0.05vw solid var(--border-color);
   backdrop-filter: blur(10px);
-  border-radius: 5px;
+  border-radius: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -194,7 +210,7 @@
   background-color: var(--background-gradient-color);
   border: 0.05vw solid var(--border-color);
   backdrop-filter: blur(10px);
-  border-radius: 5px;
+  border-radius: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -217,7 +233,7 @@
   background-color: var(--background-gradient-color);
   border: 0.05vw solid var(--border-color);
   backdrop-filter: blur(10px);
-  border-radius: 5px;
+  border-radius: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -243,6 +259,9 @@
   .projectItemTitle {
     font-size: 6vw;
     margin: 20px 0;
+  }
+  .projectItemType {
+    display: none;
   }
   .projectItemDetailArea {
     flex-direction: column;

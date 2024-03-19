@@ -43,9 +43,9 @@ const ProjectSection = () => {
                 setCurrentSelectedProjectData(item);
               }}
             >
-              <div className="expandBtn" title="Expand">
+              {/* <div className="expandBtn" title="Expand">
                 <img className="expandIcon" src={ExpandIcon}></img>
-              </div>
+              </div> */}
               <img src={item.data.img} className="projectItemImage"></img>
             </div>
             <div className="projectItemDetailArea">
@@ -61,7 +61,7 @@ const ProjectSection = () => {
                 </h1>
                 <div className="projectItemTitleHoverUnderline"></div>
               </div>
-              <div className="projectItemActionBtnList">
+              {/* <div className="projectItemActionBtnList">
                 {item.data.github && (
                   <a href={item.data.github} target="_blank">
                     <div className="projectItemActionBtn">Github</div>
@@ -77,7 +77,8 @@ const ProjectSection = () => {
                     <div className="projectItemActionBtn">Download</div>
                   </a>
                 )}
-              </div>
+              </div> */}
+              <span className="projectItemType">{item.data.shortDescription}</span>
             </div>
           </div>
         );

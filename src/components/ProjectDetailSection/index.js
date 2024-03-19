@@ -112,7 +112,7 @@ const BioSection = ({ theme, switchTheme }) => {
           className="skillsGradient skillsGradientTop"
           ref={skillGradientTopRef}
         ></div>
-        <div className="skillListHeading">Tech Used</div>
+        <div className="sectionHeading">Tech Used</div>
         <div className="skillsList" ref={skillsScrollRef}>
           {skills.map((item) => {
             return <div className="skillsItem">{item}</div>;

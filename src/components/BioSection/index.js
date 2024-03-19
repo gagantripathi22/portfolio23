@@ -10,7 +10,7 @@ const BioSection = ({ theme, switchTheme }) => {
     useContext(LeftSectionContext);
 
   const tempSkills =
-    'React, Next 13, Node, Express, JavaScript, React Native, Flutter, Redux, REST API, Electron, Dart, HTML5, Tailwind CSS, Bootstrap, CSS, Git, Firebase, MongoDB Atlas, REST API, C++, MySQL, MongoDB, SQLite, Sequelize, Mongoose, PhpMyAdmin, Docker, Visual Studio Code, Android Studio, Postman';
+    'React, Next, Node, Express, JavaScript, React Native, Flutter, Redux, Svelte, REST API, Electron, MySQL, MongoDB, Dart, HTML5, Tailwind CSS, Bootstrap, CSS, Git, Firebase, MongoDB, REST API, Sequelize, Mongoose, Docker, Visual Studio Code, Android Studio, Postman';
 
   const [skills, setSkills] = useState(tempSkills.split(', '));
 
@@ -117,11 +117,7 @@ const BioSection = ({ theme, switchTheme }) => {
         <h1 className="ownName">Gagan Tripathi</h1>
         <div className="designation">Full-Stack Developer</div>
         <div className="about">
-          As a full-stack web developer, I specialize in building web and mobile
-          applications using React, JavaScript, React Native, Node, Express, and
-          Next. With a good understanding of SQL and NoSQL, I am passionate
-          about building intuitive and responsive user interfaces and writing
-          efficient, scalable, and maintainable code.
+          I am passionate about building intuitive and responsive applications products and writing efficient, scalable, and maintainable code.
         </div>
         <div className="discordStatus"></div>
       </div>
@@ -131,7 +127,7 @@ const BioSection = ({ theme, switchTheme }) => {
           className="skillsGradient skillsGradientTop"
           ref={skillGradientTopRef}
         ></div>
-        <div className="skillListHeading">Tech Used in Projects</div>
+        <div className="sectionHeading">Tech Used in Projects</div>
         <div className="skillsList" ref={skillsScrollRef}>
           {skills.map((item) => {
             return <div className="skillsItem">{item}</div>;
@@ -143,6 +139,7 @@ const BioSection = ({ theme, switchTheme }) => {
         ></div>
       </div>
       <div className="linksAreaBio">
+      <div className="sectionHeading">Contact</div>
         <div className="linkList">
           {links.map((item) => {
             return (
