@@ -329,6 +329,9 @@
 }
 
 @media (max-width: 768px) {
+  .sectionHeading {
+    display: none;
+  }
   .bioHeader {
     // margin-top: 20px;
   }
