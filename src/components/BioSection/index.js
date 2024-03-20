@@ -15,8 +15,8 @@ const BioSection = ({ theme, switchTheme }) => {
   const [skills, setSkills] = useState(tempSkills.split(', '));
 
   const [links, setLinks] = useState([
-    { name: 'GitHub', link: 'https://github.com/gagantripathi22/' },
-    { name: 'LinkedIn', link: 'http://linkedin.com/in/gagantripathi22/' },
+    { name: 'GitHub', colorCode: '#333333', link: 'https://github.com/gagantripathi22/' },
+    { name: 'LinkedIn', colorCode: '#0077b5', link: 'http://linkedin.com/in/gagantripathi22/' },
   ]);
 
   const [skillsListTop, setSkillsListTop] = useState(0);
@@ -144,7 +144,7 @@ const BioSection = ({ theme, switchTheme }) => {
           {links.map((item) => {
             return (
               <a href={item.link} target="_blank">
-                <div className="linkItem">{item.name}</div>
+                <div className="linkItem" style={{borderColor: item.colorCode}}>{item.name}</div>
               </a>
             );
           })}
