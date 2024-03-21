@@ -20,7 +20,7 @@ const BioSection = ({ theme, switchTheme }) => {
 
   const [links, setLinks] = useState([
     { name: 'LinkedIn', colorSchema: {background: '#eef3fe', text: '#3463bb'}, link: 'http://linkedin.com/in/gagantripathi22/' },
-    { name: 'GitHub', colorSchema: {background: '#ebebeb', text: '#1f1f1f'}, link: 'https://github.com/gagantripathi22/' },
+    { name: 'GitHub', colorSchema: {background: '#edfbe9', text: '#577152'}, link: 'https://github.com/gagantripathi22/' },
   ]);
 
   useEffect(() => {
@@ -145,7 +145,7 @@ const BioSection = ({ theme, switchTheme }) => {
         <h1 className="ownName">Gagan Tripathi</h1>
         <div className="designation">Full-Stack Developer</div>
         <div className="about">
-          I am passionate about building intuitive and responsive applications products and writing efficient, scalable, and maintainable code.
+          I am passionate about building intuitive and responsive products and writing efficient, scalable, and maintainable code.
         </div>
         <div className="discordStatus"></div>
       </div>
