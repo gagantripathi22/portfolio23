@@ -195,7 +195,7 @@
 }
 
 .skillsGradientBottom {
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   transform: rotate(180deg);
 }
@@ -227,8 +227,8 @@
 }
 
 .skillsItem {
-  background-color: var(--background-button-color);
-  color: var(--foreground-color);
+  // background-color: var(--background-button-color);
+  // color: var(--foreground-color);
   border-radius: 7px;
   /* padding: 11px 36px; */
   padding: 0.7vw 2vw;
@@ -239,6 +239,8 @@
   font-family: RobotoMonoMedium;
   font-size: 0.7vw;
   /* margin-right: 9px; */
+  // border: .2vw solid #ffeaa7;
+  // background-color: #ffeaa71a;
 }
 
 .bioSectionBackBtn {
@@ -284,7 +286,7 @@
 
 .linkItem {
   background-color: var(--background-color);
-  border: .12vw solid var(--border-color);
+  // border: .2vw solid var(--border-color);
   border-radius: 7px;
   padding: 0.7vw 2vw;
   display: flex;
@@ -321,6 +323,32 @@
   border-right: 0.05vw solid var(--border-color);
   padding-right: 1vw;
   cursor: pointer;
+  position: relative;
+
+  &:hover {
+		.button-stroke:nth-child(2) {
+			stroke-dashoffset: 0;
+		}
+	}
+}
+
+.button-stroke {
+	display: block;
+	width: calc(100% - 40px);
+	height: 20px;
+	stroke: transparent;
+	position: absolute; 
+	left: 15px;
+	bottom: -15px;
+	stroke-width: 4;
+	
+	&:nth-child(2) {
+		stroke-dasharray: 650px;
+		stroke-dashoffset: 650px;
+		stroke: darken(#263238, 10%);
+		stroke-width: 2;
+		transition: stroke-dashoffset 800ms ease-out;
+	}
 }
 
 .menuBtn:not(:first-child) {

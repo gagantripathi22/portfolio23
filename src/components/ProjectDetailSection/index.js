@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef, useContext } from 'react';
 import '../../styles/components/bioSection.scss';
 import { LeftSectionContext } from '../../pages/Home';
 import BackIconDarkMode from '../../assets/back-dark.svg';
+import { pickRandomSkillItemColorSchema } from '../../sevices/skillSetColorSchema';
 
 const BioSection = ({ theme, switchTheme }) => {
   const {
@@ -13,7 +14,10 @@ const BioSection = ({ theme, switchTheme }) => {
 
   const tempSkills = currentSelectedProjectData.data.tech;
 
-  const [skills, setSkills] = useState(tempSkills.split(', '));
+  const [skills, setSkills] = useState(tempSkills.split(', ').map(skill => ({
+    name: skill,
+    colorSchema: pickRandomSkillItemColorSchema()
+  })));
 
   const [links, setLinks] = useState([
     { name: 'GitHub', link: 'https://github.com/gagantripathi22/' },
@@ -115,7 +119,8 @@ const BioSection = ({ theme, switchTheme }) => {
         <div className="sectionHeading">Tech Used</div>
         <div className="skillsList" ref={skillsScrollRef}>
           {skills.map((item) => {
-            return <div className="skillsItem">{item}</div>;
+            return <div className="skillsItem" style={{background: item.colorSchema.background, color: item.colorSchema.text}}>{item.name}</div>;
+
           })}
         </div>
         <div
