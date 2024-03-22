@@ -4,7 +4,7 @@ import { LeftSectionContext } from '../../pages/Home';
 import ThemeSwitchIcon from '../../assets/theme-switch.svg';
 import ThemeSwitchFilledIcon from '../../assets/theme-switch-filled.svg';
 import MenuIcon from '../../assets/menu.svg';
-import { pickRandomSkillItemColorSchema } from '../../sevices/skillSetColorSchema';
+import { pickRandomSkillItemColorScheme } from '../../sevices/skillSetColorScheme';
 
 const BioSection = ({ theme, switchTheme }) => {
   const { currentSectionTitle, setCurrentSectionTitle } =
@@ -15,12 +15,12 @@ const BioSection = ({ theme, switchTheme }) => {
 
   const [skills, setSkills] = useState(tempSkills.split(', ').map(skill => ({
     name: skill,
-    colorSchema: pickRandomSkillItemColorSchema()
+    colorSchema: pickRandomSkillItemColorScheme()
   })));
 
   const [links, setLinks] = useState([
-    { name: 'LinkedIn', colorSchema: {background: '#eef3fe', text: '#3463bb'}, link: 'http://linkedin.com/in/gagantripathi22/' },
-    { name: 'GitHub', colorSchema: {background: '#edfbe9', text: '#577152'}, link: 'https://github.com/gagantripathi22/' },
+    { name: 'LinkedIn', colorSchema: {background: '#ebebeb', text: '#181818'}, link: 'http://linkedin.com/in/gagantripathi22/' },
+    { name: 'GitHub', colorSchema: {background: '#ebebeb', text: '#181818'}, link: 'https://github.com/gagantripathi22/' },
   ]);
 
   useEffect(() => {
@@ -184,3 +184,7 @@ const BioSection = ({ theme, switchTheme }) => {
 };
 
 export default BioSection;
+
+
+// const [tempColorSchema] = useState(colorSchema)
+// i

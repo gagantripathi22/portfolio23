@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef, useContext } from 'react';
 import '../../styles/components/bioSection.scss';
 import { LeftSectionContext } from '../../pages/Home';
 import BackIconDarkMode from '../../assets/back-dark.svg';
-import { pickRandomSkillItemColorSchema } from '../../sevices/skillSetColorSchema';
+import { pickRandomSkillItemColorScheme } from '../../sevices/skillSetColorScheme';
 
 const BioSection = ({ theme, switchTheme }) => {
   const {
@@ -16,7 +16,7 @@ const BioSection = ({ theme, switchTheme }) => {
 
   const [skills, setSkills] = useState(tempSkills.split(', ').map(skill => ({
     name: skill,
-    colorSchema: pickRandomSkillItemColorSchema()
+    colorSchema: pickRandomSkillItemColorScheme()
   })));
 
   const [links, setLinks] = useState([
