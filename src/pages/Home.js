@@ -94,16 +94,16 @@ const Home = ({ theme, switchTheme }) => {
             </section>
           </section>
         </div>
-        <div className="mainBorders">
+        {/* <div className="mainBorders">
           <div className="lineVerticle lineVerticleLeft"></div>
           <div className="lineVerticle lineVerticleRight"></div>
           <div className="lineHorizontal lineHorizontalTop"></div>
           <div className="lineHorizontal lineHorizontalBottom"></div>
-        </div>
-        <div className="gradientBorders">
+        </div> */}
+        {/* <div className="gradientBorders">
           <div className="horizontalGradientBorder horizontalGradientBorderTop"></div>
           <div className="horizontalGradientBorder horizontalGradientBorderBottom"></div>
-        </div>
+        </div> */}
       </div>
     </LeftSectionContext.Provider>
   );

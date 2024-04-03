@@ -70,23 +70,23 @@
   position: absolute;
   /* height: calc(100% - 6vw); */
   height: 100%;
-  width: 96.1vw;
+  width: 100vw;
   /* margin: 3vw 3vw; */
-  margin-left: 1.9vw;
+  /* margin-left: 1.9vw; */
   display: flex;
   flex-direction: row;
   overflow-y: hidden;
 }
 
 .bioSection {
-  width: 30vw;
+  width: 27vw;
   height: calc(100% - 6vw);
-  border-right: 0.05vw solid var(--border-color);
+  /* border-right: 0.05vw solid var(--border-color); */
   margin-top: 3vw;
 }
 
 .projectsSection {
-  width: 66vw;
+  width: 73vw;
   height: 100%;
   overflow-y: scroll;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
@@ -103,6 +103,8 @@
   /* opacity: 1; */
   /* transform: translateY(50px); */
   /* transition: 0.7s; */
+  border-right: 0.05vw solid var(--border-color);
+
 }
 
 .rightSection {
